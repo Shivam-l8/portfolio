@@ -163,3 +163,169 @@ function typeWriter(element, text, speed = 100) {
 //     }
 // });
 
+// ============================================
+// FOOTBALL THEME - INTERACTIVE MOUSE EFFECTS
+// ============================================
+
+// Mouse interaction effect - moves elements around cursor
+let mouseX = 0;
+let mouseY = 0;
+let isMouseMoving = false;
+
+// Track mouse position
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    isMouseMoving = true;
+    
+    // Reset flag after a delay
+    clearTimeout(window.mouseMoveTimeout);
+    window.mouseMoveTimeout = setTimeout(() => {
+        isMouseMoving = false;
+    }, 100);
+});
+
+// Function to calculate distance and angle from mouse to element
+function getDistanceAndAngle(element, mouseX, mouseY) {
+    const rect = element.getBoundingClientRect();
+    const elementX = rect.left + rect.width / 2;
+    const elementY = rect.top + rect.height / 2;
+    
+    const deltaX = mouseX - elementX;
+    const deltaY = mouseY - elementY;
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const angle = Math.atan2(deltaY, deltaX);
+    
+    return { distance, angle, elementX, elementY };
+}
+
+// Apply magnetic effect to elements
+function applyMagneticEffect() {
+    if (!isMouseMoving) return;
+    
+    // Select all interactive elements
+    const interactiveElements = document.querySelectorAll(
+        '.project-card, .skill-category, .stat-item, .skill-tag, .btn, .contact-item, .nav-link, .social-links a'
+    );
+    
+    interactiveElements.forEach(element => {
+        // Skip if element is being hovered (let CSS handle it)
+        if (element.matches(':hover')) {
+            return;
+        }
+        
+        const { distance, angle, elementX, elementY } = getDistanceAndAngle(element, mouseX, mouseY);
+        
+        // Only apply effect if mouse is within a certain range (200px)
+        const maxDistance = 200;
+        if (distance < maxDistance) {
+            // Calculate movement strength (stronger when closer)
+            const strength = (1 - distance / maxDistance) * 15;
+            
+            // Calculate new position
+            const moveX = Math.cos(angle) * strength;
+            const moveY = Math.sin(angle) * strength;
+            
+            // Apply transform
+            element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            element.style.transition = 'transform 0.1s ease-out';
+        } else {
+            // Reset position when mouse is far
+            element.style.transform = 'translate(0, 0)';
+            element.style.transition = 'transform 0.3s ease-out';
+        }
+    });
+}
+
+// Animate on mouse move
+let animationFrame;
+function animate() {
+    applyMagneticEffect();
+    animationFrame = requestAnimationFrame(animate);
+}
+
+// Start animation loop
+animate();
+
+// Add pulse animation to football icon on hover
+document.addEventListener('DOMContentLoaded', () => {
+    const footballIcon = document.querySelector('.football-animation');
+    if (footballIcon) {
+        footballIcon.addEventListener('mouseenter', () => {
+            footballIcon.style.animation = 'rotateFootball 0.5s ease-in-out infinite, bounceFootball 0.3s ease-in-out infinite';
+        });
+        
+        footballIcon.addEventListener('mouseleave', () => {
+            footballIcon.style.animation = 'rotateFootball 3s ease-in-out infinite, bounceFootball 2s ease-in-out infinite';
+        });
+    }
+    
+    // Add entrance animations
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelector('.hero-buttons');
+    
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(-30px)';
+        setTimeout(() => {
+            heroTitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }, 100);
+    }
+    
+    if (heroSubtitle) {
+        heroSubtitle.style.opacity = '0';
+        heroSubtitle.style.transform = 'translateY(-30px)';
+        setTimeout(() => {
+            heroSubtitle.style.transition = 'opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s';
+            heroSubtitle.style.opacity = '1';
+            heroSubtitle.style.transform = 'translateY(0)';
+        }, 200);
+    }
+    
+    if (heroDescription) {
+        heroDescription.style.opacity = '0';
+        heroDescription.style.transform = 'translateY(-30px)';
+        setTimeout(() => {
+            heroDescription.style.transition = 'opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s';
+            heroDescription.style.opacity = '1';
+            heroDescription.style.transform = 'translateY(0)';
+        }, 300);
+    }
+    
+    if (heroButtons) {
+        heroButtons.style.opacity = '0';
+        heroButtons.style.transform = 'translateY(-30px)';
+        setTimeout(() => {
+            heroButtons.style.transition = 'opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s';
+            heroButtons.style.opacity = '1';
+            heroButtons.style.transform = 'translateY(0)';
+        }, 400);
+    }
+});
+
+// Add ripple effect on button clicks
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
