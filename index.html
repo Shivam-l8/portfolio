@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -19,6 +18,7 @@
                 <li><a href="#intro" class="nav-link">Intro</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -40,26 +40,26 @@
                     <span class="greeting">Hi, I'm</span>
                     <span class="name">Shivam Sangwan</span>
                 </h1>
-                <p class="hero-subtitle">Data Analyst & Computer Science Student</p>
+                <p class="hero-subtitle">A data analyst based in Canada</p>
                 <p class="hero-description">
-                    Analytical and detail-oriented Computer Science student with hands-on experience in data analysis,
-                    visualization, and database management. Skilled in SQL, R, and Tableau, with a proven ability to translate
-                    data into actionable insights.
+                    Enthusiast data analyst looking for summer 2026 coops in all computer fields.
                 </p>
+                <div class="hero-social-links">
+                    <a href="mailto:shivam73825@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/shivam-sangwan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shivam-sangwan-25706426b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/shivam.l8" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-placeholder football-animation">
-                    <i class="fas fa-futbol"></i>
-                </div>
-                <div class="floating-elements">
-                    <div class="floating-element" data-speed="2">⚽</div>
-                    <div class="floating-element" data-speed="3">📊</div>
-                    <div class="floating-element" data-speed="1.5">💻</div>
-                    <div class="floating-element" data-speed="2.5">📈</div>
+                    <a href="#about" class="btn btn-primary">More Information →</a>
                 </div>
             </div>
         </div>
@@ -89,22 +89,43 @@
                     <div class="education-card">
                         <div class="education-logo">
                             <div class="logo-placeholder acadia-logo">
-                                <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Shield shape -->
-                                    <path d="M50 10 L15 25 L15 70 L50 90 L85 70 L85 25 Z" fill="none" stroke="#1e3a8a" stroke-width="2"/>
-                                    <!-- Left half (blue) -->
-                                    <path d="M50 10 L15 25 L15 70 L50 90 Z" fill="#1e3a8a"/>
-                                    <!-- Right half (red) -->
-                                    <path d="M50 10 L85 25 L85 70 L50 90 Z" fill="#8b0000"/>
-                                    <!-- Crossed axes -->
-                                    <path d="M35 40 L50 55 L45 60 L30 45 Z" fill="white" opacity="0.9"/>
-                                    <path d="M65 40 L50 55 L55 60 L70 45 Z" fill="white" opacity="0.9"/>
-                                    <!-- Wolf heads (simplified) -->
-                                    <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
-                                    <circle cx="70" cy="30" r="8" fill="white" opacity="0.9"/>
-                                    <!-- Books (simplified) -->
-                                    <rect x="25" y="60" width="12" height="8" fill="white" opacity="0.9"/>
-                                    <rect x="63" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                <svg width="80" height="80" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Shield outline with thick dark blue border -->
+                                    <path d="M50 8 Q45 8 40 12 L20 22 Q15 25 15 30 L15 70 Q15 75 20 78 L50 110 Q55 112 50 110 L80 78 Q85 75 85 70 L85 30 Q85 25 80 22 L60 12 Q55 8 50 8 Z" fill="none" stroke="#1e3a8a" stroke-width="3.5"/>
+                                    <!-- Left half (dark blue) -->
+                                    <path d="M50 8 L20 22 L15 30 L15 70 L20 78 L50 110 Z" fill="#1e3a8a"/>
+                                    <!-- Right half (dark red) -->
+                                    <path d="M50 8 L80 22 L85 30 L85 70 L80 78 L50 110 Z" fill="#8b0000"/>
+                                    
+                                    <!-- Crossed Axes - forming X shape in center -->
+                                    <!-- Top-left to bottom-right axe (blade on red, handle crosses to blue) -->
+                                    <path d="M28 32 L35 38 L50 53 L48 55 L33 40 L26 34 Z" fill="white"/>
+                                    <path d="M25 28 L28 32 L26 34 L23 30 Z" fill="white"/>
+                                    <!-- Top-right to bottom-left axe (blade on blue, handle crosses to red) -->
+                                    <path d="M72 32 L65 38 L50 53 L52 55 L67 40 L74 34 Z" fill="white"/>
+                                    <path d="M75 28 L72 32 L74 34 L77 30 Z" fill="white"/>
+                                    
+                                    <!-- Top wolf head (facing right, mostly on red side, extends into blue) -->
+                                    <path d="M52 18 L58 20 L62 24 L60 28 L56 26 L52 22 Z" fill="white"/>
+                                    <circle cx="57" cy="21" r="1.5" fill="#8b0000"/>
+                                    <path d="M59 23 L61 25 L59 26 Z" fill="white"/>
+                                    <path d="M54 20 L56 19 L55 21 Z" fill="white"/>
+                                    
+                                    <!-- Bottom wolf head (facing left, mostly on blue side, extends into red) -->
+                                    <path d="M48 88 L42 90 L38 94 L40 98 L44 96 L48 92 Z" fill="white"/>
+                                    <circle cx="43" cy="91" r="1.5" fill="#1e3a8a"/>
+                                    <path d="M41 93 L39 95 L41 96 Z" fill="white"/>
+                                    <path d="M46 90 L44 89 L45 91 Z" fill="white"/>
+                                    
+                                    <!-- Bottom left book (in blue section, open book with two pages) -->
+                                    <rect x="20" y="90" width="16" height="12" fill="white" rx="1"/>
+                                    <line x1="28" y1="90" x2="28" y2="102" stroke="#1e3a8a" stroke-width="0.8"/>
+                                    <path d="M20 96 L28 96" stroke="#1e3a8a" stroke-width="0.5"/>
+                                    
+                                    <!-- Bottom right book (in red section, open book with two pages) -->
+                                    <rect x="64" y="90" width="16" height="12" fill="white" rx="1"/>
+                                    <line x1="72" y1="90" x2="72" y2="102" stroke="#8b0000" stroke-width="0.8"/>
+                                    <path d="M64 96 L72 96" stroke="#8b0000" stroke-width="0.5"/>
                                 </svg>
                             </div>
                         </div>
@@ -141,22 +162,43 @@
                     <div class="experience-card">
                         <div class="experience-logo">
                             <div class="logo-placeholder acadia-logo">
-                                <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Shield shape -->
-                                    <path d="M50 10 L15 25 L15 70 L50 90 L85 70 L85 25 Z" fill="none" stroke="#1e3a8a" stroke-width="2"/>
-                                    <!-- Left half (blue) -->
-                                    <path d="M50 10 L15 25 L15 70 L50 90 Z" fill="#1e3a8a"/>
-                                    <!-- Right half (red) -->
-                                    <path d="M50 10 L85 25 L85 70 L50 90 Z" fill="#8b0000"/>
-                                    <!-- Crossed axes -->
-                                    <path d="M35 40 L50 55 L45 60 L30 45 Z" fill="white" opacity="0.9"/>
-                                    <path d="M65 40 L50 55 L55 60 L70 45 Z" fill="white" opacity="0.9"/>
-                                    <!-- Wolf heads (simplified) -->
-                                    <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
-                                    <circle cx="70" cy="30" r="8" fill="white" opacity="0.9"/>
-                                    <!-- Books (simplified) -->
-                                    <rect x="25" y="60" width="12" height="8" fill="white" opacity="0.9"/>
-                                    <rect x="63" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                <svg width="80" height="80" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Shield outline with thick dark blue border -->
+                                    <path d="M50 8 Q45 8 40 12 L20 22 Q15 25 15 30 L15 70 Q15 75 20 78 L50 110 Q55 112 50 110 L80 78 Q85 75 85 70 L85 30 Q85 25 80 22 L60 12 Q55 8 50 8 Z" fill="none" stroke="#1e3a8a" stroke-width="3.5"/>
+                                    <!-- Left half (dark blue) -->
+                                    <path d="M50 8 L20 22 L15 30 L15 70 L20 78 L50 110 Z" fill="#1e3a8a"/>
+                                    <!-- Right half (dark red) -->
+                                    <path d="M50 8 L80 22 L85 30 L85 70 L80 78 L50 110 Z" fill="#8b0000"/>
+                                    
+                                    <!-- Crossed Axes - forming X shape in center -->
+                                    <!-- Top-left to bottom-right axe (blade on red, handle crosses to blue) -->
+                                    <path d="M28 32 L35 38 L50 53 L48 55 L33 40 L26 34 Z" fill="white"/>
+                                    <path d="M25 28 L28 32 L26 34 L23 30 Z" fill="white"/>
+                                    <!-- Top-right to bottom-left axe (blade on blue, handle crosses to red) -->
+                                    <path d="M72 32 L65 38 L50 53 L52 55 L67 40 L74 34 Z" fill="white"/>
+                                    <path d="M75 28 L72 32 L74 34 L77 30 Z" fill="white"/>
+                                    
+                                    <!-- Top wolf head (facing right, mostly on red side, extends into blue) -->
+                                    <path d="M52 18 L58 20 L62 24 L60 28 L56 26 L52 22 Z" fill="white"/>
+                                    <circle cx="57" cy="21" r="1.5" fill="#8b0000"/>
+                                    <path d="M59 23 L61 25 L59 26 Z" fill="white"/>
+                                    <path d="M54 20 L56 19 L55 21 Z" fill="white"/>
+                                    
+                                    <!-- Bottom wolf head (facing left, mostly on blue side, extends into red) -->
+                                    <path d="M48 88 L42 90 L38 94 L40 98 L44 96 L48 92 Z" fill="white"/>
+                                    <circle cx="43" cy="91" r="1.5" fill="#1e3a8a"/>
+                                    <path d="M41 93 L39 95 L41 96 Z" fill="white"/>
+                                    <path d="M46 90 L44 89 L45 91 Z" fill="white"/>
+                                    
+                                    <!-- Bottom left book (in blue section, open book with two pages) -->
+                                    <rect x="20" y="90" width="16" height="12" fill="white" rx="1"/>
+                                    <line x1="28" y1="90" x2="28" y2="102" stroke="#1e3a8a" stroke-width="0.8"/>
+                                    <path d="M20 96 L28 96" stroke="#1e3a8a" stroke-width="0.5"/>
+                                    
+                                    <!-- Bottom right book (in red section, open book with two pages) -->
+                                    <rect x="64" y="90" width="16" height="12" fill="white" rx="1"/>
+                                    <line x1="72" y1="90" x2="72" y2="102" stroke="#8b0000" stroke-width="0.8"/>
+                                    <path d="M64 96 L72 96" stroke="#8b0000" stroke-width="0.5"/>
                                 </svg>
                             </div>
                         </div>
@@ -183,191 +225,143 @@
             <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-desc">Data manipulation with Pandas, NumPy, and automation scripting</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-r-project"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">R</span>
-                                <span class="skill-desc">Statistical analysis and data visualization</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-desc">Complex queries, data modeling, and database optimization</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">C</span>
-                                <span class="skill-desc">System programming and algorithm implementation</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">HTML/CSS</span>
-                                <span class="skill-desc">Responsive web design and modern CSS frameworks</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-desc">Interactive web applications and DOM manipulation</span>
-                            </div>
-                        </div>
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-r-project"></i> R</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> C</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Analysis & Visualization</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Tableau</span>
-                                <span class="skill-desc">Interactive dashboards and business intelligence reports</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Pandas</span>
-                                <span class="skill-desc">Data wrangling, cleaning, and transformation</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-calculator"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">NumPy</span>
-                                <span class="skill-desc">Numerical computing and array operations</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Matplotlib</span>
-                                <span class="skill-desc">Data visualization and custom plot creation</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-file-excel"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Excel</span>
-                                <span class="skill-desc">Pivot tables, advanced functions, and data analysis</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-search"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">EDA</span>
-                                <span class="skill-desc">Exploratory data analysis and pattern discovery</span>
-                            </div>
-                        </div>
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data Analysis & Visualization</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> Tableau</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Pandas</span>
+                        <span class="skill-tag"><i class="fas fa-calculator"></i> NumPy</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Matplotlib</span>
+                        <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="skill-tag"><i class="fas fa-search"></i> EDA</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Jupyter Notebook</span>
-                                <span class="skill-desc">Interactive data analysis and documentation</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Jupyter Notebook</span>
+                        <span class="skill-tag"><i class="fab fa-google"></i> Google Colab</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fas fa-cogs"></i> Weka</span>
+                        <span class="skill-tag"><i class="fab fa-kaggle"></i> Kaggle</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Statistics & Machine Learning</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-chart-pie"></i> Statistical Modeling</span>
+                        <span class="skill-tag"><i class="fas fa-vial"></i> Hypothesis Testing</span>
+                        <span class="skill-tag"><i class="fas fa-chart-area"></i> Regression Analysis</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Linear Regression</span>
+                        <span class="skill-tag"><i class="fas fa-sitemap"></i> Logistic Regression</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> Classification Models</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon">
                             <i class="fab fa-google"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Google Colab</span>
-                                <span class="skill-desc">Cloud-based Python development and collaboration</span>
-                            </div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">VS Code</span>
-                                <span class="skill-desc">Code editing with extensions and debugging</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Git</span>
-                                <span class="skill-desc">Version control and collaborative development</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cogs"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Weka</span>
-                                <span class="skill-desc">Machine learning toolkit for data mining</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-kaggle"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Kaggle</span>
-                                <span class="skill-desc">Data science competitions and datasets</span>
-                            </div>
+                        <div class="certification-info">
+                            <h3>Google Data Analytics</h3>
+                            <p class="certification-level">Beginner Level</p>
                         </div>
                     </div>
+                    <div class="certification-details">
+                        <div class="certification-provider">
+                            <i class="fab fa-coursera"></i>
+                            <span>Coursera</span>
+                        </div>
+                        <div class="certification-date">2025</div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Statistics & Machine Learning</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-chart-pie"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Statistical Modeling</span>
-                                <span class="skill-desc">Building predictive models and statistical inference</span>
-                            </div>
+
+                <div class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon">
+                            <i class="fas fa-database"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-vial"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Hypothesis Testing</span>
-                                <span class="skill-desc">A/B testing and statistical significance validation</span>
-                            </div>
+                        <div class="certification-info">
+                            <h3>Introduction to SQL for Data Science</h3>
+                            <p class="certification-level">Data Science</p>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-area"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Regression Analysis</span>
-                                <span class="skill-desc">Linear and non-linear regression modeling</span>
-                            </div>
+                    </div>
+                    <div class="certification-details">
+                        <div class="certification-provider">
+                            <i class="fab fa-coursera"></i>
+                            <span>Coursera</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Linear Regression</span>
-                                <span class="skill-desc">Predictive modeling for continuous variables</span>
-                            </div>
+                        <div class="certification-date">2025</div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon">
+                            <i class="fab fa-python"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-sitemap"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Logistic Regression</span>
-                                <span class="skill-desc">Binary classification and probability estimation</span>
-                            </div>
+                        <div class="certification-info">
+                            <h3>Data Visualization with Python</h3>
+                            <p class="certification-level">Beginner Level</p>
                         </div>
-                        <div class="skill-item">
+                    </div>
+                    <div class="certification-details">
+                        <div class="certification-provider">
+                            <i class="fab fa-coursera"></i>
+                            <span>Coursera</span>
+                        </div>
+                        <div class="certification-date">2024</div>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-header">
+                        <div class="certification-icon">
                             <i class="fas fa-brain"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Classification Models</span>
-                                <span class="skill-desc">Supervised learning algorithms for categorization</span>
-                            </div>
                         </div>
+                        <div class="certification-info">
+                            <h3>Machine Learning with IBM</h3>
+                            <p class="certification-level">Machine Learning</p>
+                        </div>
+                    </div>
+                    <div class="certification-details">
+                        <div class="certification-provider">
+                            <i class="fab fa-ibm"></i>
+                            <span>IBM via Coursera</span>
+                        </div>
+                        <div class="certification-date">2024</div>
                     </div>
                 </div>
             </div>

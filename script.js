@@ -81,17 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Initialize EmailJS (you'll need to replace these with your own credentials)
-// Sign up at https://www.emailjs.com/ (free tier available)
-(function() {
-    // Initialize EmailJS with your public key
-    // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init('YOUR_PUBLIC_KEY'); // You'll get this from EmailJS dashboard
-    }
-})();
-
 // Anonymous form submission handler
+// Using Formspree for email delivery (free tier: 50 submissions/month)
+// Form endpoint: https://formspree.io/f/movyvwpw
 const anonymousForm = document.getElementById('anonymousForm');
 if (anonymousForm) {
     anonymousForm.addEventListener('submit', async (e) => {
@@ -106,44 +98,34 @@ if (anonymousForm) {
         submitButton.textContent = 'Sending...';
         
         try {
-            // Check if EmailJS is available and configured
-            if (typeof emailjs === 'undefined') {
-                throw new Error('EmailJS not loaded. Please check the script tag.');
-            }
+            // Send using Formspree
+            const formspreeEndpoint = 'https://formspree.io/f/movyvwpw';
             
-            // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' with your actual values
-            const response = await emailjs.send(
-                'YOUR_SERVICE_ID',      // Service ID from EmailJS
-                'YOUR_TEMPLATE_ID',     // Template ID from EmailJS
-                {
-                    to_email: 'shivam73825@gmail.com',
-                    message: message,
-                    from_name: 'Anonymous',
-                    reply_to: 'anonymous@portfolio.com'
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                'YOUR_PUBLIC_KEY'       // Public key from EmailJS
-            );
+                body: JSON.stringify({
+                    message: message,
+                    _subject: 'Anonymous Message from Portfolio',
+                    _replyto: 'anonymous@portfolio.com'
+                })
+            });
             
-            // Success
-            alert('Thank you for your anonymous message! I\'ll receive it shortly.');
-            anonymousForm.reset();
+            if (response.ok) {
+                alert('Thank you for your anonymous message! I\'ll receive it shortly.');
+                anonymousForm.reset();
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Failed to send message');
+            }
             
         } catch (error) {
             console.error('Error sending message:', error);
-            
-            // Check if it's a configuration error
-            if (error.text && error.text.includes('Invalid') || 
-                typeof emailjs === 'undefined' ||
-                error.message?.includes('YOUR_')) {
-                alert('Email service is not configured yet. For now, your message has been logged. Please contact me directly via email: shivam73825@gmail.com');
-                console.log('Anonymous message received:', message);
-                console.log('To enable email sending, set up EmailJS. See EMAILJS_SETUP.md for instructions.');
-            } else {
-                // Other errors
-                alert('There was an error sending your message. Please try emailing me directly at shivam73825@gmail.com');
-                console.log('Anonymous message received:', message);
-            }
+            alert('There was an error sending your message. Please try emailing me directly at shivam73825@gmail.com');
+            console.log('Anonymous message received:', message);
             anonymousForm.reset();
         } finally {
             // Re-enable button
