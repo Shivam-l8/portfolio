@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">⚽ Portfolio</div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#intro" class="nav-link">Intro</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -30,8 +30,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Main Content Container - All on One Page -->
+    <main class="main-container">
+        <!-- Hero/Intro Section -->
+        <section id="intro" class="hero intro-section">
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
@@ -61,12 +63,9 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
+        <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -82,18 +81,95 @@
                         created visual reports, and maintained database integrity. I'm also a Dean's List student and scholarship 
                         recipient, with hands-on experience in SQL, Python, R, and Tableau.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">4+</div>
-                            <div class="stat-label">Major Projects</div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="education-section">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="education-card">
+                        <div class="education-logo">
+                            <div class="logo-placeholder acadia-logo">
+                                <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Shield shape -->
+                                    <path d="M50 10 L15 25 L15 70 L50 90 L85 70 L85 25 Z" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+                                    <!-- Left half (blue) -->
+                                    <path d="M50 10 L15 25 L15 70 L50 90 Z" fill="#1e3a8a"/>
+                                    <!-- Right half (red) -->
+                                    <path d="M50 10 L85 25 L85 70 L50 90 Z" fill="#8b0000"/>
+                                    <!-- Crossed axes -->
+                                    <path d="M35 40 L50 55 L45 60 L30 45 Z" fill="white" opacity="0.9"/>
+                                    <path d="M65 40 L50 55 L55 60 L70 45 Z" fill="white" opacity="0.9"/>
+                                    <!-- Wolf heads (simplified) -->
+                                    <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
+                                    <circle cx="70" cy="30" r="8" fill="white" opacity="0.9"/>
+                                    <!-- Books (simplified) -->
+                                    <rect x="25" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                    <rect x="63" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Certifications</div>
+                        <div class="education-details">
+                            <h4>Bachelor of Science: Computer Science</h4>
+                            <p class="education-institution">Acadia University</p>
+                            <p class="education-location">Wolfville, NS</p>
+                            <p class="education-dates">September 2022 → April 2026</p>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2026</div>
-                            <div class="stat-label">Graduation</div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="experience-section">
+                    <h3 class="subsection-title">Experience</h3>
+                    <div class="experience-card">
+                        <div class="experience-logo">
+                            <div class="logo-placeholder company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="experience-details">
+                            <h4>Junior Data Analyst</h4>
+                            <p class="experience-company">Swastik Steel</p>
+                            <p class="experience-location">Delhi, India</p>
+                            <p class="experience-dates">April 2025 → July 2025</p>
+                            <ul class="experience-description">
+                                <li>Analyzed data trends to support decision-making processes</li>
+                                <li>Created visual reports using data visualization tools</li>
+                                <li>Maintained databases and ensured data integrity across systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-logo">
+                            <div class="logo-placeholder acadia-logo">
+                                <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Shield shape -->
+                                    <path d="M50 10 L15 25 L15 70 L50 90 L85 70 L85 25 Z" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+                                    <!-- Left half (blue) -->
+                                    <path d="M50 10 L15 25 L15 70 L50 90 Z" fill="#1e3a8a"/>
+                                    <!-- Right half (red) -->
+                                    <path d="M50 10 L85 25 L85 70 L50 90 Z" fill="#8b0000"/>
+                                    <!-- Crossed axes -->
+                                    <path d="M35 40 L50 55 L45 60 L30 45 Z" fill="white" opacity="0.9"/>
+                                    <path d="M65 40 L50 55 L55 60 L70 45 Z" fill="white" opacity="0.9"/>
+                                    <!-- Wolf heads (simplified) -->
+                                    <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
+                                    <circle cx="70" cy="30" r="8" fill="white" opacity="0.9"/>
+                                    <!-- Books (simplified) -->
+                                    <rect x="25" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                    <rect x="63" y="60" width="12" height="8" fill="white" opacity="0.9"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="experience-details">
+                            <h4>Residence Coordinator</h4>
+                            <p class="experience-company">Acadia University</p>
+                            <p class="experience-location">Wolfville, Nova Scotia</p>
+                            <p class="experience-dates">February 2023 → Current</p>
+                            <ul class="experience-description">
+                                <li>Coordinated residential programs and activities for diverse student populations</li>
+                                <li>Monitored residence hall environments to ensure safety and compliance standards</li>
+                                <li>Implemented feedback mechanisms to improve residence life experiences for students</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -109,45 +185,189 @@
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-desc">Data manipulation with Pandas, NumPy, and automation scripting</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-r-project"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">R</span>
+                                <span class="skill-desc">Statistical analysis and data visualization</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-desc">Complex queries, data modeling, and database optimization</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">C</span>
+                                <span class="skill-desc">System programming and algorithm implementation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-desc">Responsive web design and modern CSS frameworks</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-desc">Interactive web applications and DOM manipulation</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Data Analysis & Visualization</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">EDA</span>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Tableau</span>
+                                <span class="skill-desc">Interactive dashboards and business intelligence reports</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Pandas</span>
+                                <span class="skill-desc">Data wrangling, cleaning, and transformation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">NumPy</span>
+                                <span class="skill-desc">Numerical computing and array operations</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Matplotlib</span>
+                                <span class="skill-desc">Data visualization and custom plot creation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-excel"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Excel</span>
+                                <span class="skill-desc">Pivot tables, advanced functions, and data analysis</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">EDA</span>
+                                <span class="skill-desc">Exploratory data analysis and pattern discovery</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Tools & Platforms</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Jupyter Notebook</span>
-                        <span class="skill-tag">Google Colab</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Weka</span>
-                        <span class="skill-tag">Kaggle</span>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Jupyter Notebook</span>
+                                <span class="skill-desc">Interactive data analysis and documentation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-google"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Google Colab</span>
+                                <span class="skill-desc">Cloud-based Python development and collaboration</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-desc">Code editing with extensions and debugging</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-desc">Version control and collaborative development</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Weka</span>
+                                <span class="skill-desc">Machine learning toolkit for data mining</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-kaggle"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Kaggle</span>
+                                <span class="skill-desc">Data science competitions and datasets</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Statistics & Machine Learning</h3>
                     <div class="skill-items">
-                        <span class="skill-tag">Statistical Modeling</span>
-                        <span class="skill-tag">Hypothesis Testing</span>
-                        <span class="skill-tag">Regression Analysis</span>
-                        <span class="skill-tag">Linear Regression</span>
-                        <span class="skill-tag">Logistic Regression</span>
-                        <span class="skill-tag">Classification Models</span>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Statistical Modeling</span>
+                                <span class="skill-desc">Building predictive models and statistical inference</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-vial"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Hypothesis Testing</span>
+                                <span class="skill-desc">A/B testing and statistical significance validation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-area"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Regression Analysis</span>
+                                <span class="skill-desc">Linear and non-linear regression modeling</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Linear Regression</span>
+                                <span class="skill-desc">Predictive modeling for continuous variables</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Logistic Regression</span>
+                                <span class="skill-desc">Binary classification and probability estimation</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Classification Models</span>
+                                <span class="skill-desc">Supervised learning algorithms for categorization</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,73 +485,44 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">
-                Seeking a Winter 2026 Co-op position as a Data Analyst. I'm always open to discussing data analysis projects, 
-                opportunities, or collaborations.
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-intro">
+                If you'd like to get in touch, you can reach me using the following methods. I am open to freelance projects and collaborations.
             </p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <a href="mailto:shivam73825@gmail.com">shivam73825@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <a href="tel:+17828825362">+1 (782) 882-5362</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Wolfville, NS B4P 1L7, Canada</p>
-                        </div>
-                    </div>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <strong>Email:</strong>
+                    <a href="mailto:shivam73825@gmail.com?subject=Portfolio%20Contact&body=Hi%20Shivam,%0D%0A%0D%0A">shivam73825@gmail.com</a>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-method">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/shivam-sangwan-25706426b" target="_blank" rel="noopener noreferrer">in/shivam-sangwan</a>
+                </div>
+                <div class="contact-method">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/shivam-sangwan" target="_blank" rel="noopener noreferrer">git/shivam-sangwan</a>
+                </div>
+                <div class="contact-method">
+                    <strong>Phone:</strong>
+                    <a href="tel:+17828825362">+1 (782) 882-5362</a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="#" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+            <div class="contact-divider">
+                <span class="divider-line"></span>
+                <span class="divider-text">or</span>
+                <span class="divider-line"></span>
+            </div>
+            <div class="anonymous-message">
+                <h3>Leave an anonymous message</h3>
+                <form class="anonymous-form" id="anonymousForm">
+                    <textarea id="anonymousMessage" name="anonymousMessage" rows="4" placeholder="Write your anonymous message here" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
