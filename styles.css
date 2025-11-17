@@ -34,8 +34,8 @@ body {
     background: var(--bg-dark);
 }
 
-/* Football field pattern background */
-.field-pattern {
+/* Subtle data grid pattern background */
+.data-pattern {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,19 +45,18 @@ body {
         repeating-linear-gradient(
             0deg,
             transparent,
-            transparent 49px,
-            var(--field-lines) 49px,
-            var(--field-lines) 51px
+            transparent 19px,
+            rgba(99, 102, 241, 0.03) 19px,
+            rgba(99, 102, 241, 0.03) 20px
         ),
         repeating-linear-gradient(
             90deg,
             transparent,
-            transparent 49px,
-            var(--field-lines) 49px,
-            var(--field-lines) 51px
-        ),
-        radial-gradient(circle at center, var(--field-green-light) 0%, var(--field-green) 50%, var(--field-green-dark) 100%);
-    opacity: 0.03;
+            transparent 19px,
+            rgba(99, 102, 241, 0.03) 19px,
+            rgba(99, 102, 241, 0.03) 20px
+        );
+    opacity: 0.5;
     z-index: 0;
     pointer-events: none;
 }
@@ -352,26 +351,19 @@ body > * {
     margin: 0 auto;
 }
 
-/* Football animation */
-.football-animation {
-    animation: rotateFootball 3s ease-in-out infinite, bounceFootball 2s ease-in-out infinite;
+/* Data visualization icon animation */
+.data-icon-animation {
+    animation: pulseData 3s ease-in-out infinite;
 }
 
-@keyframes rotateFootball {
+@keyframes pulseData {
     0%, 100% {
-        transform: rotate(0deg);
+        opacity: 0.6;
+        transform: scale(1);
     }
     50% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes bounceFootball {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
+        opacity: 1;
+        transform: scale(1.05);
     }
 }
 
@@ -485,6 +477,21 @@ section {
 .about-content {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.about-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.about-tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .about-text p {
@@ -976,6 +983,23 @@ section {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .project-content p {
